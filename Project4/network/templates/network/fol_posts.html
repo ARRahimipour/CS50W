@@ -1,0 +1,80 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+
+<div class="container">
+    <h2 id="h2-posts" class="shadow-sm p-3 mb-5 bg-body rounded">All {{user}}'s followings</h2>
+    <hr>
+
+    <div class="posts-block">
+        {% for post in posts %}
+        
+                <div class="post-{{post.id}} post">
+                    <div class="alert alert-success"><a href = "profile/{{ post.author }}">{{ post.author }} </a> says at {{post.date}}</div>  
+                    Post:
+                    <div class="text-{{post.id}} elem-post">{{post.text}}</div>
+    
+                    
+                     
+                    {% if user.is_authenticated %}
+                        
+                       
+                        <div class="my-buttons">
+                            {% if post in liked_posts %}
+                            <div class="like"  data-userid="{{ user.id }}">
+                               
+                                <button class="heart added btn btn-info" type="button" id='heart-{{post.id}}' data-post-id = {{post.id}}>Likes
+                                    <span class="likes_number" id='num-{{post.id}}'> {{post.likes_count}}</span>
+                                </button>
+                            </div>
+                       
+    
+                        {% else %}
+                    
+    
+                            <div class="like" data-postid="{{ post.id }}" data-userid="{{ user.id }}">
+                                
+                                
+                                <button class="heart btn btn-info" type="button" id='heart-{{post.id}}' data-post-id = {{post.id}}>Likes 
+                                    <span class="likes_number" id='num-{{post.id}}'>{{post.likes_count}}</span>
+                                </button>
+                
+                            </div>
+                        {%endif%}
+    
+                
+                    {% else %}
+                            <div class=" ">
+                                
+                                <span class="likes_number btn btn-info" id='num-{{post.id}}'>Likes {{post.likes.count}}</span>
+                            
+                            </div>
+                            
+                    <hr>
+                    {%endif%}
+                        </div>
+                            
+            </div>
+            
+    
+        {% endfor %}
+     
+    </div>
+
+    {% include "network/pagination.html" with page=posts %} 
+</div>
+
+    
+{% endblock %}
+
+
+
+
+
+{% block script %}
+
+    <script src="{% static 'network/profile9.js' %}"></script>
+
+{% endblock %}

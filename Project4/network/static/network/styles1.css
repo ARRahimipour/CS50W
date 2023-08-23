@@ -1,0 +1,24 @@
+.profile-name {
+    font-size: large;
+    font-weight: bold;
+}
+.elem-post{
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding: 5px;
+}
+.my-buttons{
+    display: flex;
+    flex-flow: row wrap;
+
+    
+    margin-bottom: 25px;
+    margin-top: 10px;
+
+}
+.btn{
+    margin-right: 5px;
+}
+.post {
+    background-color: rgb(250, 250, 250);
+}
