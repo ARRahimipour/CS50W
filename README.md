@@ -1,9 +1,9 @@
 Harvard CS50W — 2022 Solutions 😎
 =====================
 
--   [Course Link](https://cs50.harvard.edu/python/2022/)
--   [My Certificate](https://cs50.harvard.edu/certificates/6315f067-7b65-481b-9297-ef151fe33ce5)
--   [Final Project](https://github.com/alirezarpa/Tic-Tac-Toe)
+-   [Course Link](https://cs50.harvard.edu/web/2020/)
+-   [My Certificate](https://cs50.harvard.edu/certificates/09fcbcc1-caac-46fc-8a4c-00b151a87d65)
+-   [Final Project](https://github.com/alirezarpa/Text-to-HTML-converter)
 
 ## What is it?
 
